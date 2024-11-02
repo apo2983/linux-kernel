@@ -1,7 +1,9 @@
 digraph {
 	node [shape=plaintext]
-	e0 [label=<<table border="0" cellborder="1" cellspacing="0"> <tr><td port="e1"> vaddr: 13721600<br/> len: 409600<br/> compression: none</td></tr></table>>]
+	e0 [label=<<table border="0" cellborder="1" cellspacing="0"> <tr><td port="e1"> vaddr: 14598144<br/> len: 4096<br/> compression: none</td></tr></table>>]
 	file:f0 -> e0:e1
-	label="1 file extents point to 1 extents (total len:409600)" labelloc=top
-	file [label=<<table border="0" cellborder="1" cellspacing="0"> <tr><td port="f0"> addr: 0<br/> len: 409600<br/> (offset: 0)</td></tr></table>>]
+	e1 [label=<<table border="0" cellborder="1" cellspacing="0"> <tr><td port="e1"> vaddr: 13721600<br/> len: 409600<br/> compression: none</td></tr></table>>]
+	file:f1 -> e1:e1
+	label="2 file extents point to 2 extents (total len:409600)" labelloc=top
+	file [label=<<table border="0" cellborder="1" cellspacing="0"> <tr><td port="f0"> addr: 0<br/> len: 4096<br/> (offset: 0)</td><td port="f1"> addr: 4096<br/> len: 405504<br/> (offset: 4096)</td></tr></table>>]
 }
